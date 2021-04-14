@@ -22,4 +22,22 @@
   $(window).on('load', function() {
     aos_init();
   });
+
+
+  $("#year").change(function(){
+    console.log(this.value);
+  });
+
+
+  var status = "log";
+  $.ajax({
+    url:"dropdown.php",    //the page containing php script
+    type: "post",    //request type,
+    dataType: 'json',
+    data: {id: "id", status:status},
+    success:function(result){
+
+    }
+  });
+
 })(jQuery);

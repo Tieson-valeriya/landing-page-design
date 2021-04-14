@@ -11,6 +11,8 @@
 	<link rel="stylesheet" type="text/css" href="./assets/style.css">
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-theme/0.1.0-beta.10/select2-bootstrap.min.css">
 </head>
 <body>
 	<div class="header d-flex justify-content-center flex-row align-item-center">
@@ -21,84 +23,71 @@
 		<img src="./assets/11208.jpg" class="fixed_back center">
 		<div class="row d-flex justify-content-center">
 			<div class="col-lg-12 col-md-12 col-12 dropdown_item">
-				<div class="dropdown">
-				  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				    Car Make
-				  </button>
-				  <div class="dropdown-menu dropdown-multicol2" aria-labelledby="dropdownMenuButton">
-				    <div class="dropdown-col">
-				      <a class="dropdown-item" href="#">Oranges</a>
-				      <a class="dropdown-item" href="#">Bananas</a>
-				      <a class="dropdown-item" href="#">Apples</a>
-				    </div>
-				    <div class="dropdown-col">
-				      <a class="dropdown-item" href="#">Potatoes</a>
-				      <a class="dropdown-item" href="#">Leeks</a>
-				      <a class="dropdown-item" href="#">Cauliflowers</a>
-				    </div>
-				  </div>
-				</div>
+				<select class="form-control form-control-xs selectpicker" name="" data-size="7" data-live-search="true" data-title="Location" id="mar_make" data-width="100%">
+				    <option value="" selected>Car Make</option>
+				    <option value="">Aarkay Engineering Corpot</option>
+				    <option value="">HAAS GROUP INTERNATIONAL INC., USA</option>
+				    <option value="">HOLLANDSE SIGNAAL APPARATEN GMBH,NETHERLAND</option>
+				    <option value="">KLIMAAT TOTAAL, NEDERLAND</option>
+				    <option value="">LIAAEN BAMFORD LTD,ENGLAND</option>
+				    <option value="">SAAB, SWEDEN</option>
+				    <option value="">LIAAEN BAMFORD LTD,ENGLAND</option>
+				    <option value="">SAAB, SWEDEN</option>
+				    <option value="">LIAAEN BAMFORD LTD,ENGLAND</option>
+				    <option value="">SAAB, SWEDEN</option>
+				    <option value="">LIAAEN BAMFORD LTD,ENGLAND</option>
+				    <option value="">SAAB, SWEDEN</option>
+				</select>
 			</div>
 			<div class="col-lg-12 col-md-12 col-12 dropdown_item">
-				<div class="dropdown">
-				  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				    Car Model
-				  </button>
-				  <div class="dropdown-menu dropdown-multicol2" aria-labelledby="dropdownMenuButton">
-				    <div class="dropdown-col">
-				      <a class="dropdown-item" href="#">Oranges</a>
-				      <a class="dropdown-item" href="#">Bananas</a>
-				      <a class="dropdown-item" href="#">Apples</a>
-				    </div>
-				    <div class="dropdown-col">
-				      <a class="dropdown-item" href="#">Potatoes</a>
-				      <a class="dropdown-item" href="#">Leeks</a>
-				      <a class="dropdown-item" href="#">Cauliflowers</a>
-				    </div>
-				  </div>
-				</div>
+				<select class="form-control form-control-xs selectpicker" name="" data-size="7" data-live-search="true" data-title="Location" id="car_model" data-width="100%">
+				    <option value="" selected>Car Model</option>
+				    <option value="">Aarkay Engineering Corpot</option>
+				    <option value="">HAAS GROUP INTERNATIONAL INC., USA</option>
+				    <option value="">HOLLANDSE SIGNAAL APPARATEN GMBH,NETHERLAND</option>
+				    <option value="">KLIMAAT TOTAAL, NEDERLAND</option>
+				    <option value="">LIAAEN BAMFORD LTD,ENGLAND</option>
+				    <option value="">SAAB, SWEDEN</option>
+				    <option value="">LIAAEN BAMFORD LTD,ENGLAND</option>
+				    <option value="">SAAB, SWEDEN</option>
+				    <option value="">LIAAEN BAMFORD LTD,ENGLAND</option>
+				    <option value="">SAAB, SWEDEN</option>
+				    <option value="">LIAAEN BAMFORD LTD,ENGLAND</option>
+				    <option value="">SAAB, SWEDEN</option>
+				</select>
 			</div>
 			<div class="col-lg-12 col-md-12 col-12 dropdown_item">
-				<div class="dropdown">
-				  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				    Car Year
-				  </button>
-				  <div class="dropdown-menu dropdown-multicol2" aria-labelledby="dropdownMenuButton">
-				    <div class="dropdown-col">
-				      <a class="dropdown-item" href="#">2000</a>
-				      <a class="dropdown-item" href="#">2001</a>
-				      <a class="dropdown-item" href="#">2002</a>
-				    </div>
-				    <div class="dropdown-col">
-				      <a class="dropdown-item" href="#">2018</a>
-				      <a class="dropdown-item" href="#">2019</a>
-				      <a class="dropdown-item" href="#">2020</a>
-				    </div>
-				  </div>
-				</div>
+				<select class="form-control form-control-xs selectpicker" name="" data-size="7" data-live-search="true" data-title="Location" id="year" data-width="100%">
+				    <option value="" selected>Car Year</option>
+				    <option value="2015">2015</option>
+				    <option value="2016">2016</option>
+				    <option value="2016">2017</option>
+				    <option value="2018">2018</option>
+				    <option value="2019">2019</option>
+				    <option value="2020">2020</option>
+				    <option value="2021">2021</option>
+				    <option value="2022">2022</option>
+				    <option value="2023">2023</option>
+				    <option value="2024">2024</option>
+				    <option value="2025">2025</option>
+				    <option value="2026">2026</option>
+				</select>
 			</div>
 			<div class="col-lg-12 col-md-12 col-12 row d-flex align-item-center second_info_box dropdown_item">
 				<!-- <div class="second_info_title">zipcode</div> -->
 				<input type="text" name="" placeholder="Please input here zipcode..." class="form-control">
 			</div>
 			<div class="col-lg-12 col-md-12 col-12 dropdown_item">
-				<div class="dropdown">
-				  <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-				    Suspect Issue
-				  </button>
-				  <div class="dropdown-menu dropdown-multicol2" aria-labelledby="dropdownMenuButton">
-				    <div class="dropdown-col">
-				      <a class="dropdown-item" href="#">Oranges</a>
-				      <a class="dropdown-item" href="#">Bananas</a>
-				      <a class="dropdown-item" href="#">Apples</a>
-				    </div>
-				    <div class="dropdown-col">
-				      <a class="dropdown-item" href="#">Potatoes</a>
-				      <a class="dropdown-item" href="#">Leeks</a>
-				      <a class="dropdown-item" href="#">Cauliflowers</a>
-				    </div>
-				  </div>
-				</div>
+				<select class="form-control form-control-xs selectpicker" name="" data-size="7" data-live-search="true" data-title="Location" id="suspect_issue" data-width="100%">
+				    <option value="" selected>Suspect Issue</option>
+				    <option value="Broken">Broken</option>
+				    <option value="Repair">Repair</option>
+				    <option value="Break">Break</option>
+				    <option value="Crash">Crash</option>
+				    <option value="Change">Change</option>
+				    <option value="Failure">Failure</option>
+				    <option value="Jam">Jam</option>
+				</select>
 			</div>
 		</div>
 		<div class="record_info">
@@ -128,7 +117,11 @@
 <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
-<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
+
+<!-- select box with search -->
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
 <!-- <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script> -->
+
+<script type="text/javascript" src="./assets/search.js"></script>
 <script type="text/javascript" src="./assets/javascript.js"></script>
 </html>

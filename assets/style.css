@@ -1,0 +1,129 @@
+body{
+	/*position: relative;*/
+	height: 100%;
+}
+.main{
+	/*position: relative;*/
+	display: flex;
+	height: 100%;
+	padding: 0;
+	flex-direction: column;
+	justify-content: space-around;
+	/*border: 1px solid red;*/
+}
+.fixed_back{
+	position: absolute;
+	top: 70px;
+	left: 0;
+	opacity: 0.75;
+	width: 100%;
+	height: 100%;
+/*	background-position: center;
+    background-size: cover;*/
+    z-index: -1;
+    object-fit: cover;
+}
+.header{
+	height: 70px;
+	font-size: 28px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #007bff;
+	color: white;
+	font-weight: 600;
+	text-transform: uppercase;
+	border-bottom: 2px solid white;
+}
+
+
+/*Main part start*/
+.main:first-child{
+	padding-top: 20px;
+}
+option{
+	font-size: 14px;
+	color: #007bff;
+}
+.form-control{
+	color: #007bff!important;
+	font-weight: 600;
+}
+.dropdown_item{
+	padding: 15px 0;
+}
+
+button{
+	width: 100%;
+	color: #007bff;
+	font-weight: 600;
+}
+
+/*main part end*/
+
+
+
+
+/*Voice record part start*/
+.record_info{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 0;
+}
+.record_title{
+	font-size: 26px;
+	font-weight: 600;
+	color: white;
+	text-transform: uppercase;
+}
+.text-slider-items {
+ 	display: none;
+}
+
+.record_icon{
+	border-radius: 25px;
+	color: #fff;
+	width: 50px;
+	height: 50px;
+	background-color: #007bff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+	box-shadow: 2px 2px 3px #6677dd;
+}
+.second_info_box input::placeholder { 
+  color: #007bff;
+}
+/*Voice record part end*/
+
+
+
+/*Submit part start*/
+.bottom{
+	padding: 30px 0;
+}
+.submit{
+	background-color: #007bff;
+	color: white;
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 60px;
+	margin: 1px 1px;
+	width: 90%;
+	height: 80%;
+	align-items: center;
+	text-align: center;
+}
+/*Submit part end*/
+
+/* Columns */
+div.dropdown-multicol2{
+  width: 100%;
+}
+div.dropdown-multicol2>div.dropdown-col{
+  display:inline-block;
+  width: 32%;
+}

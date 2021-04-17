@@ -513,7 +513,7 @@
                     header +
                     searchbox +
                     actionsbox +
-                    '<div class="dropdown-menu inner" role="listbox" aria-expanded="false">' +
+                    '<div class="dropdown-menu inner" id="dropdown-div" role="listbox" aria-expanded="false">' +
                     '</div>' +
                     donebutton +
                     '</div>' +

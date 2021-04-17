@@ -17,7 +17,7 @@ body{
 	left: 0;
 	opacity: 0.75;
 	width: 100%;
-	height: 100%;
+	height: 120%;
 /*	background-position: center;
     background-size: cover;*/
     z-index: -1;
@@ -61,7 +61,14 @@ button{
 
 /*main part end*/
 
+ul {
+  list-style: none;
+}
 
+#recordingslist audio {
+  display: block;
+  margin-bottom: 10px;
+}
 
 
 /*Voice record part start*/
@@ -79,9 +86,13 @@ button{
 	text-transform: uppercase;
 }
 .text-slider-items {
- 	display: none;
+ 	/* display: none; */
 }
-
+.record_btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 .record_icon{
 	border-radius: 25px;
 	color: #fff;
@@ -93,6 +104,7 @@ button{
 	align-items: center;
 	font-size: 30px;
 	box-shadow: 2px 2px 3px #6677dd;
+  margin: 0 10px;
 }
 .second_info_box input::placeholder { 
   color: #007bff;
@@ -141,7 +153,7 @@ div.dropdown-multicol2>div.dropdown-col{
 /* line 27, bootstrap-select.scss */
 select.bs-select-hidden,
 select.selectpicker {
-  display: none !important;
+  /*display: none !important;*/
 }
 
 /* line 32, bootstrap-select.scss */

@@ -23,9 +23,8 @@
 		<img src="./assets/11208.jpg" class="fixed_back center">
 		<div class="row d-flex justify-content-center">
 			<div class="col-lg-12 col-md-12 col-12 dropdown_item">
-				<select class="form-control form-control-xs selectpicker" name="" data-size="7" data-live-search="true" data-title="Location" id="mar_make" data-width="100%">
-				    <option value="" selected>Car Make</option>
-				    <option value="">Aarkay Engineering Corpot</option>
+				<select class="form-control form-control-xs selectpicker" name="" data-size="7" data-live-search="true" data-title="Car Make" id="car_make" data-width="100%">
+				    <!-- <option value="">Aarkay Engineering Corpot</option>
 				    <option value="">HAAS GROUP INTERNATIONAL INC., USA</option>
 				    <option value="">HOLLANDSE SIGNAAL APPARATEN GMBH,NETHERLAND</option>
 				    <option value="">KLIMAAT TOTAAL, NEDERLAND</option>
@@ -36,13 +35,12 @@
 				    <option value="">LIAAEN BAMFORD LTD,ENGLAND</option>
 				    <option value="">SAAB, SWEDEN</option>
 				    <option value="">LIAAEN BAMFORD LTD,ENGLAND</option>
-				    <option value="">SAAB, SWEDEN</option>
+				    <option value="">SAAB, SWEDEN</option> -->
 				</select>
 			</div>
 			<div class="col-lg-12 col-md-12 col-12 dropdown_item">
-				<select class="form-control form-control-xs selectpicker" name="" data-size="7" data-live-search="true" data-title="Location" id="car_model" data-width="100%">
-				    <option value="" selected>Car Model</option>
-				    <option value="">Aarkay Engineering Corpot</option>
+				<select class="form-control form-control-xs selectpicker" name="" data-size="7" data-live-search="true" data-title="Car Model" id="car_model" data-width="100%">
+				    <!-- <option value="">Aarkay Engineering Corpot</option>
 				    <option value="">HAAS GROUP INTERNATIONAL INC., USA</option>
 				    <option value="">HOLLANDSE SIGNAAL APPARATEN GMBH,NETHERLAND</option>
 				    <option value="">KLIMAAT TOTAAL, NEDERLAND</option>
@@ -53,12 +51,11 @@
 				    <option value="">LIAAEN BAMFORD LTD,ENGLAND</option>
 				    <option value="">SAAB, SWEDEN</option>
 				    <option value="">LIAAEN BAMFORD LTD,ENGLAND</option>
-				    <option value="">SAAB, SWEDEN</option>
+				    <option value="">SAAB, SWEDEN</option> -->
 				</select>
 			</div>
 			<div class="col-lg-12 col-md-12 col-12 dropdown_item">
-				<select class="form-control form-control-xs selectpicker" name="" data-size="7" data-live-search="true" data-title="Location" id="year" data-width="100%">
-				    <option value="" selected>Car Year</option>
+				<select class="form-control form-control-xs selectpicker" name="" data-size="7" data-live-search="true" data-title="Year" id="year" data-width="100%">
 				    <option value="2015">2015</option>
 				    <option value="2016">2016</option>
 				    <option value="2016">2017</option>
@@ -75,11 +72,10 @@
 			</div>
 			<div class="col-lg-12 col-md-12 col-12 row d-flex align-item-center second_info_box dropdown_item">
 				<!-- <div class="second_info_title">zipcode</div> -->
-				<input type="text" name="" placeholder="Please input here zipcode..." class="form-control">
+				<input type="text" id="zipcode" name="" placeholder="Please input here zipcode..." class="form-control">
 			</div>
 			<div class="col-lg-12 col-md-12 col-12 dropdown_item">
-				<select class="form-control form-control-xs selectpicker" name="" data-size="7" data-live-search="true" data-title="Location" id="suspect_issue" data-width="100%">
-				    <option value="" selected>Suspect Issue</option>
+				<select class="form-control form-control-xs selectpicker" name="" data-size="7" data-live-search="true" data-title="Suspect Issue" id="suspect_issue" data-width="100%">
 				    <option value="Broken">Broken</option>
 				    <option value="Repair">Repair</option>
 				    <option value="Break">Break</option>
@@ -91,14 +87,23 @@
 			</div>
 		</div>
 		<div class="record_info">
-			<div class="record_title"><span class="letters text-slider-items">Recorded filename&nbsp&nbsp
-            </span><strong class="text-slider"></strong></div>
-
-			<div class="record_icon">
-				<span class="iconify" data-icon="ls:record" data-inline="false"></span>
-			</div>
+			<div class="record_title"><span class="letters text-slider-items" id="main_title">RECORD HERE
+            	</span><strong class="text-slider"></strong>
+        	</div>
+        	<div class="record_btn">
+        		<div class="record_icon">
+					<span class="iconify" id="start-btn" data-icon="ls:record" data-inline="false"></span>
+				</div>
+				<div class="record_icon pause" style="background-color: gray;">
+					<span class="iconify" id="disable" data-icon="fe:disabled" data-inline="false" ></span>
+					<span class="iconify" id="stop-btn" data-icon="bi:stop-fill" data-inline="false" style="display: none;"></span>
+				</div>
+        	</div>
+        	<!-- <div class="record_title">Stored Recordings</div> -->
+    		<ul id="recordingslist"></ul>
+			
 		</div>
-		<div class="row d-flex justify-content-center bottom"><div class="submit">UPLOAD</div></div>
+		<div class="row d-flex justify-content-center bottom"><div class="submit" id="submit">UPLOAD</div></div>
 	</div>
 </body>
 
@@ -110,6 +115,8 @@
 <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 <script src="assets/vendor/venobox/venobox.min.js"></script>
 <script src="assets/vendor/aos/aos.js"></script>
+
+<script type="text/javascript" src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 
 
@@ -124,4 +131,5 @@
 
 <script type="text/javascript" src="./assets/search.js"></script>
 <script type="text/javascript" src="./assets/javascript.js"></script>
+<script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 </html>

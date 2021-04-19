@@ -279,24 +279,20 @@ window.onload = function(){
   });
 
 
-  $("#year").change(function(){
-    console.log(this.value);
-  });
-
 
   var status = "c_make";
-  $.ajax({
-    url:"dropdown.php",    //the page containing php script
-    type: "post",    //request type,
-    dataType: 'json',
-    data: {id: "id", status:status},
-      success:function(result){
-        $('#car_make').html(result);
-         
-        var status = 'c_model';
+  // $.ajax({
+  //   url:"dropdown.php",    //the page containing php script
+  //   type: "post",    //request type,
+  //   dataType: 'json',
+  //   data: {id: "id", status:status},
+  //     success:function(result){
+  //       $('#car_make').html(result);
+  //        console.log(result);
+  //       var status = 'c_model';
         
-      }
-  });
+  //     }
+  // });
   $("#car_make").change(function(){
     var make = $("#car_make").val();
     $.ajax({

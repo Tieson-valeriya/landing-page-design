@@ -33,6 +33,9 @@ if (navigator.mediaDevices.getUserMedia) {
       var n_year = document.getElementById("year").value;
       var n_code = document.getElementById("zipcode").value;
       var n_issue = document.getElementById("suspect_issue").value;
+
+      var n_name = n_make + "_" + n_model + "_" + n_year + "_" + n_code + "_" + n_issue;
+      console.log(n_name);
       if(n_make && n_model && n_year && n_code && n_issue){
         $(".letters").html("Recording");
         $(".pause").css("background-color", "#007bff");
@@ -43,8 +46,21 @@ if (navigator.mediaDevices.getUserMedia) {
         console.log("recorder started");
         // record.style.background = "red";
 
-        stop.disabled = false;
-        record.disabled = true;
+        // stop.disabled = false;
+        // record.disabled = true;
+
+        setTimeout(function() {
+          $(".letters").html("Saved");
+          mediaRecorder.stop();
+          console.log(mediaRecorder.state);
+          console.log("recorder stopped");
+          record.style.background = "";
+          record.style.color = "";
+          // mediaRecorder.requestData();
+    
+          stop.disabled = true;
+          record.disabled = false;
+        }, 5000);
       }else{
         alert("input your data!");
       } 
@@ -66,7 +82,7 @@ if (navigator.mediaDevices.getUserMedia) {
     mediaRecorder.onstop = function(e) {
       console.log("data available after MediaRecorder.stop() called.");
 
-      const clipName = prompt('Enter a name for your sound clip?','My unnamed clip');
+      // const clipName = prompt('Enter a name for your sound clip?','My unnamed clip');
 
       const clipContainer = document.createElement('article');
       const clipLabel = document.createElement('p');
@@ -77,12 +93,12 @@ if (navigator.mediaDevices.getUserMedia) {
       audio.setAttribute('controls', '');
       deleteButton.textContent = 'Delete';
       deleteButton.className = 'delete';
-
-      if(clipName === null) {
-        clipLabel.textContent = 'fdsghjkdgf';
-      } else {
-        clipLabel.textContent = "dsjkuffghj";
-      }
+      clipLabel.textContent = "clipname";
+      // if(clipName === null) {
+      //   clipLabel.textContent = 'fdsghjkdgf';
+      // } else {
+      //   clipLabel.textContent = "clipname";
+      // }
 
       clipContainer.appendChild(audio);
       clipContainer.appendChild(clipLabel);
@@ -94,7 +110,34 @@ if (navigator.mediaDevices.getUserMedia) {
       chunks = [];
       const audioURL = window.URL.createObjectURL(blob);
       audio.src = audioURL;
+      audio.download = "akfjlajfkdl";
       console.log("recorder stopped");
+
+      $("#submit").click(function(){
+        var n_make = document.getElementById("car_make").value;
+        var n_model = document.getElementById("car_model").value;
+        var n_year = document.getElementById("year").value;
+        var n_code = document.getElementById("zipcode").value;
+        var n_issue = document.getElementById("suspect_issue").value;
+
+        var n_name = n_make + "_" + n_model + "_" + n_year + "_" + n_code + "_" + n_issue;
+        $(".letters").html("Uploaded");
+        
+        var data = new FormData();
+        var oReq = new XMLHttpRequest();
+        oReq.open("POST", 'upload.php', true);
+        oReq.onload = function (oEvent) {
+          console.log("Here is uploaded it.")
+        };
+
+        // var blob = blob;
+        const blob = new Blob(chunks, { 'type' : 'audio/mp3; codecs=opus' });
+        data.append('name', n_name);
+        data.append('file', blob);
+        console.log("this is my data:", data)
+
+        oReq.send(data);
+      });
 
       deleteButton.onclick = function(e) {
         let evtTgt = e.target;
